@@ -1,7 +1,7 @@
 
 import { createSlice, createAsyncThunk } from '@reduxjs/toolkit';
 import axios from 'axios';
-import { API_POST_URL } from '../../constants'
+
 
 
 
@@ -9,7 +9,7 @@ export const fetchdata = createAsyncThunk('fetchdata', (page: number) => {
     // console.log(page);
 
     // return axios.get(`${API_POST_URL}`)
-    return axios.get(`${API_POST_URL}?_page=${page}&_limit=10`)
+    return axios.get(`${import.meta.env.VITE_APP_API_URL}?_page=${page}&_limit=10`)
         .then(res => (
             res.data
         ))
@@ -19,9 +19,9 @@ export const fetchdata = createAsyncThunk('fetchdata', (page: number) => {
 });
 
 export const fullfetchdata = createAsyncThunk('fullfetchdata', () => {
-    // console.log(page);
 
-    return axios.get(API_POST_URL)
+
+    return axios.get(import.meta.env.VITE_APP_API_URL)
         .then(res => (
             res.data
         ))

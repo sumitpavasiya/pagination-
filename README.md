@@ -68,3 +68,7 @@ export default tseslint.config([
 ])
 ```
 "# pagination-" 
+
+<!-- git remote add origin https://github.com/sumitpavasiya/pagination-.git
+git branch -M main
+git push -u origin main -->
