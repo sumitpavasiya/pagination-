@@ -1,0 +1,1 @@
+export const API_POST_URL = "https://jsonplaceholder.typicode.com/posts";
